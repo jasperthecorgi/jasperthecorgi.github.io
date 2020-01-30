@@ -1,0 +1,50 @@
+.Navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 110px;
+  background: #64bfc8;
+  transition: 0.3s all ease-in;
+  font-family: "Lato", sans-serif;
+  &.Navbar--collapsed {
+    height: 90px;
+    .Navbar__Container {
+      .Navbar__Logo img {
+        transform: scale(0.6);
+      }
+    }
+  }
+  .Navbar__Container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    .Navbar__SubContainer{
+      display: flex;
+      justify-content: space-around;
+      width: calc(50% - 75px);
+      .Navbar__Link{
+        color: #fff;
+        font-size: 24px;
+      }
+    }
+    .Navbar__Logo {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      img {
+        width: 150px;
+        transition: 0.3s all ease-in;
+        transform-origin: center top;
+      }
+    }
+  }
+}
