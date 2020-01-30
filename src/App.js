@@ -1,9 +1,29 @@
-import React from 'react'
+import React from "react";
+import { BrowserRouter as Router,Switch, Route } from "react-router-dom";
+import { Homepage } from "./HomePage/HomePage";
 
-class App extends React.Component {
-    render() {
-        return (<div>Jasper the corgi</div>)
-    }
-}
+const App = () => {
+  return (
+    <Router>
+        <Switch>
+            {/*  index paga aka newsfeed page */}
+            <Route
+              exact
+              path="/"
+              render={() => {
+                  return <Homepage />;
+              }}
+            />
 
-export default App
+            {/* not found */}
+            <Route
+              render={() => {
+                  return <div>Invalid url</div>;
+              }}
+            />
+        </Switch>
+    </Router>
+  );
+};
+
+export default App;
