@@ -1,5 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+}
 
 a {
   text-decoration: none;
+}
+
+.maxWidthContainer {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
 }

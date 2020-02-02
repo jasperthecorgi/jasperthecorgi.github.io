@@ -10,12 +10,12 @@ export const Navbar = () => {
 
   return (
     <nav role="navigation" className={classNames("Navbar", { "Navbar--collapsed": canScrollUp })}>
-      <div className="Navbar__Container">
+      <div className="Navbar__Container maxWidthContainer">
         <div className="Navbar__SubContainer">
           <Link to="/" className="Navbar__Link">
             Blog
           </Link>
-          <Link to="/" className="Navbar__Link">
+          <Link to="/gallery" className="Navbar__Link">
             Gallery
           </Link>
         </div>

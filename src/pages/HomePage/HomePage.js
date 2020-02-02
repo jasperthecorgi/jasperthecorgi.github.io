@@ -1,11 +1,12 @@
 import React from "react";
 import { Navbar } from "../../components/Navbar/Navbar";
+import { Banner } from "../../components/Banner/Banner";
 
 export const Homepage = () => {
   return (
-    <div style={{height:'200vh'}}>
+    <div className="Homepage">
       <Navbar />
-      Jasper the corgi
+      <Banner className="Homepage__Banner" background="#64bfc8"/>
     </div>
   );
 };
