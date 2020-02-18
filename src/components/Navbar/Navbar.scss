@@ -7,13 +7,12 @@
   background: #64bfc8;
   transition: 0.3s all ease-in;
   font-family: "Lato", sans-serif;
+  z-index: 10;
   &.Navbar--collapsed {
     height: 90px;
     background: rgba(100, 191, 200, 0.9);
-    .Navbar__Container {
-      .Navbar__Logo img {
-        transform: scale(0.6);
-      }
+    .Navbar__Container .Navbar__Logo {
+      transform: translateX(-50%) scale(0.6);
     }
   }
   .Navbar__Container {
@@ -37,10 +36,38 @@
       top: 0;
       left: 50%;
       transform: translateX(-50%);
+      transition: 0.3s all ease-in;
+      transform-origin: center top;
       img {
         width: 150px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Navbar {
+    height: 75px;
+    &.Navbar--collapsed {
+      height: 60px;
+      background: rgba(100, 191, 200, 0.9);
+      .Navbar__MobileContainer .Navbar__Logo {
+        transform: translateX(-50%) scale(0.6);
+      }
+    }
+    .Navbar__MobileContainer {
+      padding: 0 15px;
+      display: block;
+      .Navbar__Logo {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
         transition: 0.3s all ease-in;
         transform-origin: center top;
+        img {
+          width: 100px;
+        }
       }
     }
   }

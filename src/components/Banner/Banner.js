@@ -5,10 +5,10 @@ import "./Banner.scss";
 
 export const Banner = ({background, className}) => {
   return (
-    <nav role="navigation" className={classNames("Banner",className)} style={{background:`${background}`}}>
+    <div className={classNames("Banner",className)} style={{background:`${background}`}}>
       <div className="maxWidthContainer">
         123
       </div>
-    </nav>
+    </div>
   );
 };

@@ -1,10 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato|Raleway:400,500,600,700&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   margin: 0;
 }
 
@@ -16,4 +17,22 @@ a {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
+  padding: 0 40px;
+}
+
+.isDesktopOnly {
+  display: block;
+}
+
+.isMobileOnly {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .isDesktopOnly {
+    display: none !important;
+  }
+  .isMobileOnly {
+    display: block !important;
+  }
 }
