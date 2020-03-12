@@ -30,10 +30,10 @@ export default class CustomCarousel extends React.Component {
     const { current } = this.state;
     return (
       <div className="CustomCarousel">
-        <div className={current % 2 === 1 && "hide"}>
+        <div className={current % 2 === 1 ? "hide" : ""}>
           <img src={images[current]} alt="" />
         </div>
-        <div className={current % 2 === 0 && "hide"}>
+        <div className={current % 2 === 0 ? "hide" : ""}>
           <img src={images[current]} alt="" />
         </div>
       </div>

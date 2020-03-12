@@ -3,6 +3,7 @@ import { Navbar } from "../../components/Navbar/Navbar";
 import { Banner } from "../../components/Banner/Banner";
 import { Meetup } from "../../components/Meetup/Meetup";
 import { Footer } from "../../components/Footer/Footer";
+import DrawPrize from "../../components/DrawPrize/DrawPrize";
 
 export const Homepage = () => {
   return (
@@ -10,6 +11,7 @@ export const Homepage = () => {
       <Navbar />
       <Banner className="Homepage__Banner" background="#64bfc8"/>
       <Meetup/>
+      <DrawPrize/>
       <Footer/>
     </div>
   );

@@ -1,0 +1,140 @@
+.DrawPrize {
+  .maxWidthContainer {
+    padding: 50px 40px;
+    .DrawPrize-Title {
+      font-family: "Raleway", sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #333333;
+      padding-bottom: 30px;
+      margin-bottom: 40px;
+      border-bottom: 1px solid #666666;
+      text-align: center;
+    }
+    .DrawPrize-Users {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .DrawPrize-User {
+        position: relative;
+        margin: 10px;
+        > img {
+          width: 100px;
+          height: 100px;
+          border-radius: 50px;
+          object-fit: contain;
+        }
+        .DrawPrize-Plus3 {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100px;
+          height: 100px;
+          border-radius: 50px;
+          background-color: rgba(0, 0, 0, 0.3);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #ffffff;
+          font-size: 24px;
+          font-family: "Lato", sans-serif;
+        }
+        .DrawPrizeBlink {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100px;
+          height: 100px;
+          border-radius: 50px;
+          background-color: rgba(255, 255, 255, 0.9);
+          opacity: 0;
+          >img {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .DrawPrize-Btn {
+      cursor: pointer;
+      margin: 40px auto;
+      width: 350px;
+      height: 50px;
+      border-radius: 6px;
+      background-color: #fcda67;
+      color: #333333;
+      text-align: center;
+      font-family: "Raleway", sans-serif;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 30px;
+      padding: 10px 0;
+    }
+  }
+}
+
+.winnerOverlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.55);
+  color: #3a3a3a;
+  overflow-y: hidden;
+  z-index: 11;
+  transform: scale(0.1);
+  transition: 0.3s all ease-in-out;
+  * {
+    box-sizing: border-box;
+  }
+  &.ReactModal__Overlay--after-open {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+  }
+  &.ReactModal__Overlay--before-close {
+    display: flex;
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  .winnerModal {
+    text-align: center;
+    width: 80%;
+    max-width: 460px;
+    padding: 50px 60px;
+    box-sizing: border-box;
+    background-color: #e6e6e6;
+    box-shadow: 0 2px 16px 0 #000000;
+    color: #000000;
+    font-family: "Raleway", serif;
+    font-size: 20px;
+    line-height: 26px;
+    &:focus {
+      outline: none;
+    }
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 10px 0;
+      padding: 3px;
+      border: 3px solid #333333;
+    }
+    .headLine {
+      font-family: "Raleway", serif;
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 32px;
+      margin-bottom: 10px;
+    }
+    .winnerName {
+      font-family: "Lato", sans-serif;
+      margin-bottom: 10px;
+    }
+  }
+}
