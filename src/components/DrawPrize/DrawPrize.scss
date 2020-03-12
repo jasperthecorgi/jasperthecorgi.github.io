@@ -72,6 +72,75 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .DrawPrize {
+    .maxWidthContainer {
+      padding: 50px 20px;
+      .DrawPrize-Title {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #666666;
+        text-align: center;
+      }
+      .DrawPrize-Users {
+        .DrawPrize-User {
+          position: relative;
+          margin: 5px;
+          > img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+            object-fit: contain;
+          }
+          .DrawPrize-Plus3 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+            background-color: rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            font-size: 24px;
+            font-family: "Lato", sans-serif;
+          }
+          .DrawPrizeBlink {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+            background-color: rgba(255, 255, 255, 0.9);
+            opacity: 0;
+            >img {
+              width: 100%;
+            }
+          }
+        }
+      }
+      .DrawPrize-Btn {
+        cursor: pointer;
+        margin: 20px auto;
+        width: 100%;
+        height: 50px;
+        border-radius: 6px;
+        background-color: #fcda67;
+        color: #333333;
+        text-align: center;
+        font-family: "Raleway", sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 30px;
+        padding: 10px 0;
+      }
+    }
+  }
+}
+
 .winnerOverlay {
   position: fixed;
   top: 0;

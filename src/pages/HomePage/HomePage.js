@@ -11,7 +11,6 @@ export const Homepage = () => {
       <Navbar />
       <Banner className="Homepage__Banner" background="#64bfc8"/>
       <Meetup/>
-      <DrawPrize/>
       <Footer/>
     </div>
   );
