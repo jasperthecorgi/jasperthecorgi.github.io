@@ -13,6 +13,14 @@ const App = () => {
           exact
           path="/"
           render={() => {
+            return <Discount />;
+          }}
+        />
+
+        <Route
+          exact
+          path="/home"
+          render={() => {
             return <Homepage />;
           }}
         />
@@ -22,14 +30,6 @@ const App = () => {
           path="/gallery"
           render={() => {
             return <Gallery />;
-          }}
-        />
-
-        <Route
-          exact
-          path="/discount"
-          render={() => {
-            return <Discount />;
           }}
         />
 
