@@ -7,7 +7,6 @@ export const Banner = ({background, className}) => {
   return (
     <div className={classNames("Banner",className)} style={{background:`${background}`}}>
       <div className="maxWidthContainer">
-        123
       </div>
     </div>
   );

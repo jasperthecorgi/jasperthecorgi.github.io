@@ -4,13 +4,13 @@
   left: 0;
   right: 0;
   height: 110px;
-  background: #64bfc8;
+  background: #00BBAB;
   transition: 0.3s all ease-in;
-  font-family: "Lato", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   z-index: 10;
   &.Navbar--collapsed {
     height: 90px;
-    background: rgba(100, 191, 200, 0.9);
+    background: rgba(0, 187, 171, 0.9);
     .Navbar__Container .Navbar__Logo {
       transform: translateX(-50%) scale(0.6);
     }
