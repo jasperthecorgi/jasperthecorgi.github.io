@@ -62,4 +62,25 @@ const list = [
     discount: "15%",
     code: "CORGIJASPER15",
   },
+  {
+    id: 4,
+    name: "Pawsitive Solutions",
+    link: "https://www.pawsitivesco.com/",
+    discount: "15%",
+    code: "JASPER15",
+  },
+  {
+    id: 5,
+    name: "Pooch Botanics",
+    link: "https://poochbotanics.com/",
+    discount: "10%",
+    code: "JASPER10",
+  },
+  {
+    id: 6,
+    name: "KAG Pet",
+    link: "https://kagpet.com/",
+    discount: "10%",
+    code: "JASPER10",
+  }
 ];

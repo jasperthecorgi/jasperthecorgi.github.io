@@ -1,5 +1,6 @@
 import React from "react";
 import poolJson from "../../data/pool.json";
+import mData from "../../data/mdata.json";
 import storyJson from "../../data/story";
 import { CSVLink } from "react-csv";
 import Modal from "react-modal";
@@ -19,7 +20,7 @@ export default class DrawPrize extends React.Component {
     };
   }
   componentDidMount() {
-    // this.fetchComments();
+    this.fetchComments();
     const AList = poolJson;
     let finalList = {};
     for (let i = 0; i < AList.length; i++) {
@@ -48,7 +49,7 @@ export default class DrawPrize extends React.Component {
     storyJson.forEach(user => {
       if (finalList[user.author]) {
         let entry = finalList[user.author].entry;
-        finalList[user.author].entry = entry + 10;
+        finalList[user.author].entry = entry + 15;
       }
     });
     this.setState({ userList, drawList: finalList });
@@ -56,6 +57,20 @@ export default class DrawPrize extends React.Component {
   componentWillUnmount() {
     clearInterval(this.switchCurrent);
   }
+  fetchComments = (end = "") => {
+    const self = this;
+    const res = mData;
+        const comments = [];
+        res.data.shortcode_media.edge_media_to_parent_comment.edges.forEach(({node}) =>
+          comments.push({
+            text: node.text,
+            author: node.owner && node.owner.username,
+            logo: node.owner && node.owner.profile_pic_url,
+          })
+        );
+        const newPool = this.state.poolList.concat(comments);
+        this.setState({ poolList: newPool });
+  };
   // fetchComments = (end = "") => {
   //   const self = this;
   //   fetch(
@@ -82,17 +97,27 @@ export default class DrawPrize extends React.Component {
   //     });
   // };
   startDraw = () => {
-    const interval = setInterval(this.blink, 100);
+    const { userList, drawList } = this.state;
+    let array = [];
+    userList.forEach(user => {
+      if (drawList[user]) {
+        const newList = new Array(drawList[user].entry).fill(user);
+        array = array.concat(newList);
+      }
+    });
+    const interval = setInterval(()=>this.blink(array), 100);
     setTimeout(() => {
       clearInterval(interval);
       this.drawWinner();
     }, 3000);
   };
 
-  blink = () => {
-    const { userList } = this.state;
-    const result = Math.floor(Math.random() * userList.length);
-    this.setState({ blink: result });
+  blink = (array) => {
+    const {userList}=this.state;
+    const result = Math.floor(Math.random() * array.length);
+    console.log(result)
+    const blinkIndex = userList.indexOf(array[result])
+    this.setState({ blink: blinkIndex });
   };
   drawWinner = () => {
     const { userList, drawList } = this.state;
@@ -104,7 +129,6 @@ export default class DrawPrize extends React.Component {
       }
     });
     const result = Math.floor(Math.random() * array.length);
-    console.log(array)
     this.setState({ winner: result, blink: -1, resultList: array });
   };
 
