@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkpersonal=self.webpackChunkpersonal||[]).push([[678],{7704:function(n,t,e){e.r(t);var o=e(7294),a=e(5444),u=e(4841),c=e(7487),f=e(4382);t.default=function(n){var t=n.location;return(0,o.useEffect)((function(){(0,a.navigate)("/coupon/")}),[]),(0,f.tZ)(u.Z,{location:t},(0,f.tZ)(c.Z,{title:"Home"}))}}}]);
+//# sourceMappingURL=component---src-pages-index-js-1a540366502130e592ce.js.map
