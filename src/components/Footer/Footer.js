@@ -1,12 +1,12 @@
 import * as React from "react";
-import "./Footer.scss";
+import "twin.macro"
+import { MaxContainer } from "../share-ui";
 
-export const Footer = () => {
-  return (
-    <footer role="footer" className="Footer">
-      <div className="maxWidthContainer">
-        <div>© jasperthecorgi.github.io</div>
-      </div>
+const Footer = () => (
+    <footer role="footer" tw="bg-darkGreen text-center">
+      <MaxContainer>
+        <div tw="py-3">© jasperthecorgi.github.io</div>
+      </MaxContainer>
     </footer>
   );
-};
+export default Footer

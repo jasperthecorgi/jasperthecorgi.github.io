@@ -1,7 +1,5 @@
 import * as React from "react";
-import classNames from "classnames";
-import { Link } from "react-router-dom";
-import "./Navbar.scss";
+import { Link } from "gatsby";
 import { useWindowCanScrollUp } from "../../hooks";
 import Logo from "../../static/Logo.png";
 
@@ -9,7 +7,7 @@ export const Navbar = () => {
   const canScrollUp = useWindowCanScrollUp();
 
   return (
-    <nav role="navigation" className={classNames("Navbar", { "Navbar--collapsed": canScrollUp })}>
+    <nav role="navigation" className={"Navbar"}>
       <div className="Navbar__Container maxWidthContainer isDesktopOnly">
         <div className="Navbar__SubContainer">
           <Link to="/" className="Navbar__Link">

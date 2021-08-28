@@ -1,8 +1,8 @@
 import React from "react";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
-import { Homepage } from "./pages/HomePage/HomePage";
-import { Gallery } from "./pages/Gallery/Gallery";
-import { Discount } from "./pages/Discount/Discount";
+import { Homepage } from "./oldpages/HomePage/HomePage";
+import { Gallery } from "./oldpages/Gallery/Gallery";
+import { Discount } from "./oldpages/Discount/Discount";
 
 const App = () => {
   return (
