@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import { Footer } from "../components/Footer/Footer";
+import { Footer } from "../components/Footer";
 import { MaxContainer } from "../components/share-ui";
 
 const CouponPage = ({ data, location }) => {
@@ -49,7 +49,7 @@ const CouponPage = ({ data, location }) => {
   return (
     <Layout location={location}>
       <Seo title="Jasper's coupon" />
-      <div tw="bg-gradient-to-b from-lightGreen to-darkGreen py-5 min-h-screen">
+      <div tw="bg-gradient-to-b from-green-600 to-green-300 py-5 min-h-screen">
         <MaxContainer>
           <h1 tw="font-bold text-xl text-center bg-white rounded p-2.5 shadow my-4">Use Jasper's code to save!</h1>
           <div tw="grid grid-cols-2 gap-4">

@@ -10,8 +10,8 @@ import tw, { GlobalStyles } from "twin.macro"
 
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import Navbar from "./Navbar/Navbar"
-import Footer from "./Footer/Footer"
+// import Navbar from "./Navbar"
+import Footer from "./Footer"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

@@ -1,5 +1,5 @@
-const { animation } = require("tailwindcss/defaultTheme")
-const defaultTheme = require("tailwindcss/defaultTheme")
+const { animation } = require("tailwindcss/defaultTheme");
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -10,8 +10,17 @@ module.exports = {
         bouncex: "bouncex .5s ease-in-out 2",
       },
       colors: {
-        lightGreen: "#a8ff78",
-        darkGreen: "#78ffd6"
+        green: {
+          100: "#d8f3dc",
+          200: "#b7e4c7",
+          300: "#95d5b2",
+          400: "#74c69d",
+          500: "#52b788",
+          600: "#40916c",
+          700: "#2d6a4f",
+          800: "#1b4332",
+          900: "#081c15",
+        },
       },
       fontFamily: {
         sans: ["Poppins", "ui-sans-serif", "system-ui"],
@@ -77,4 +86,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};
