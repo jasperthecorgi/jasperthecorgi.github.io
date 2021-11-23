@@ -1,7 +1,10 @@
 {
   "main.js": "render-page.js",
   "render-page.js.map": "render-page.js.map",
+  "static/Logo.png": "static/Logo-23c643ff0361035f02bc0da4d583c8fe.png",
+  "static/hero-texture.svg": "static/hero-texture-ff00b4cafcb241d1731d45dbf23ba694.svg",
+  "static/hero.jpg": "static/hero-daa2eb20fe9dbda04e1545c89801885e.jpg",
   "static/icon-ig.png": "static/icon-ig-f7b3dff34fba7bf43d83022425cb2ef3.png",
-  "static/icon-tiktok.png": "static/icon-tiktok-70633067aaebb8a893f2ad5846b8012a.png",
+  "static/icon-tiktok.png": "static/icon-tiktok-75f5beace64e981cfd047a1a0c03caa1.png",
   "static/meetup.png": "static/meetup-bf7926a3eca29d17d6001439ebb62f3b.png"
 }
