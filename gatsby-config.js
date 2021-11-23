@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Jasper the Corgi`,
+    description: `A corgi lives in Toronto. Sharing about corgi life and dog tips`,
+    author: `@jerryzhao0423`,
+    siteUrl: `https://jasperthecorgi.github.io`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     "gatsby-plugin-use-query-params",
-
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -33,6 +33,8 @@ module.exports = {
     },
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-emotion`,
+    `gatsby-plugin-transition-link`,
+    `gatsby-plugin-offline`,
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
@@ -41,6 +43,16 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["G-L4KXZ5VT1R"],
+        pluginConfig: {
+          head: true,
+          respectDNT: false,
+        },
+      },
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

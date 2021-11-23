@@ -6,14 +6,15 @@
  */
 
 import React, { useState, useRef, useEffect, useCallback } from "react"
-import tw, { GlobalStyles } from "twin.macro"
+import { Helmet } from "react-helmet";
+import tw, { GlobalStyles, css } from "twin.macro"
 
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-// import Navbar from "./Navbar"
 import Footer from "./Footer"
+import { Navbar } from "./Navbar/Navbar";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, bgColor }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -30,9 +31,8 @@ const Layout = ({ children }) => {
 
       <div>
         <main tw="relative">
-          <div>
-            {children}
-          </div>
+          <Navbar bgColor={bgColor} />
+          {children}
         </main>
         <div>
           <Footer />

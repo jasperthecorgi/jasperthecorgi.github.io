@@ -6,17 +6,18 @@ import MeetupBg from "../../images/meetup.png";
 import IconPaw from "../../images/ic-paw.svg"
 
 const MeetUp = () => (
-  <div tw="py-10 bg-green-600 rounded-tl-lg rounded-br-lg text-white">
+  <div tw="py-10 bg-darkBeige text-green-700">
     <MaxContainer>
-      <img src={MeetupBg} alt="Toronto Corgi Meetup" tw="mb-6 rounded-md w-5/6 mx-auto" />
+      <img src={MeetupBg} alt="Toronto Corgi Meetup" tw="mb-8 rounded-sm w-5/6 mx-auto" />
       <div tw="flex items-center">
         <img src={IconPaw} alt="Corgi Meetup" tw="w-5 h-5 mr-1"/>
-        <h3 tw="text-sm font-semibold">Corgi Meetup</h3>
+        <h3 tw="text-sm text-mainBlack font-medium">Corgi Meetup</h3>
       </div>
-      <div tw="text-xl font-bold pt-1">Meet with more corgi friends!</div>
-      <p tw="py-5">
-        As corgi pawrents, we know that corgis always love to play with corgis! We organized corgi meetup in Great Toronto Area every month!
-        Welcome to meet and play with Jasper and his friends!
+      <div tw="text-2xl font-semibold pt-4">Meet with more corgi friends!</div>
+      <p tw="py-4 text-mainBlack text-sm">
+        <p tw="my-2">As corgi pawrents, we know that corgis always love to play with corgis! </p>
+        <p tw="my-2">We organized corgi meetup in Great Toronto Area every month!</p>
+        <p tw="my-2">Welcome to meet and play with Jasper and his friends!</p>
       </p>
       <div tw="inline-block text-lg font-bold">Join the group here!</div>
       <a href="https://www.meetup.com/Toronto-Corgi-Meetup-Group/" target="_blank" rel="noreferrer noopener">

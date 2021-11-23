@@ -9,7 +9,7 @@ import IconYoutube from "../../images/social/icon-youtube.png";
 const Logo = tw.img`w-8 h-8`;
 
 const FollowMe = () => (
-  <div tw="py-8">
+  <div tw="py-8 bg-green-700 text-darkBeige">
     <MaxContainer>
       <h3 tw="font-bold text-center text-xl">Follow me on social media!</h3>
       <div tw="flex justify-around items-center py-6">

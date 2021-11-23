@@ -3,9 +3,9 @@ import "twin.macro"
 import { MaxContainer } from "./share-ui";
 
 const Footer = () => (
-    <footer role="footer" tw="bg-green-300 text-center">
+    <footer role="footer" tw="bg-green-700 text-center">
       <MaxContainer>
-        <div tw="py-3">© jasperthecorgi.github.io</div>
+        <div tw="py-3 text-darkBeige">©jasperthecorgi.github.io</div>
       </MaxContainer>
     </footer>
   );

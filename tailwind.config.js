@@ -10,6 +10,10 @@ module.exports = {
         bouncex: "bouncex .5s ease-in-out 2",
       },
       colors: {
+        mainBlack: "#151110",
+        beige: "#faf9f7",
+        darkBeige: "#f7f2ef",
+        primaryBtn: "#d98f89",
         green: {
           100: "#d8f3dc",
           200: "#b7e4c7",
@@ -17,7 +21,7 @@ module.exports = {
           400: "#74c69d",
           500: "#52b788",
           600: "#40916c",
-          700: "#2d6a4f",
+          700: "#3b625f",
           800: "#1b4332",
           900: "#081c15",
         },
