@@ -22,10 +22,14 @@ const IndexPage = ({ location }) => {
       <section>
         <div tw="py-10 text-center bg-beige">
           <MaxContainer>
-            <div tw="text-2xl text-green-700">Hi! Welcome to my page!</div>
-            <h1 tw="text-5xl font-semibold text-green-700 leading-normal">I'm Jasper</h1>
-            <h2 tw="text-2xl text-green-700 leading-normal">A Pembroke Welsh Corgi</h2>
-            <img src={HeroImg} alt="Jasper the corgi" tw="rounded-md mt-10 mb-4"/>
+            <div tw="flex flex-col md:(flex-row-reverse items-center)">
+              <div tw="w-full text-center md:(w-1/2 text-left pl-16)">
+                <div tw="text-2xl text-green-700">Hi! Welcome to my page!</div>
+                <h1 tw="text-5xl font-semibold text-green-700 leading-normal">I'm Jasper</h1>
+                <h2 tw="text-2xl text-green-700 leading-normal">A Pembroke Welsh Corgi</h2>
+              </div>
+              <img src={HeroImg} alt="Jasper the corgi" tw="rounded-md mt-10 mb-4 w-full md:(w-1/2)"/>
+            </div>
             <img src={HeroTexture} alt='' tw="absolute w-72" css={[css`opacity: 0.16;bottom:-50%;left:0`]}/>
           </MaxContainer>
         </div>

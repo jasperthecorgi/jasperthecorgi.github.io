@@ -9,10 +9,10 @@ import IconYoutube from "../../images/social/icon-youtube.png";
 const Logo = tw.img`w-8 h-8`;
 
 const FollowMe = () => (
-  <div tw="py-8 bg-green-700 text-darkBeige">
+  <div tw="py-8 bg-green-700 text-darkBeige md:(pt-20 pb-12)">
     <MaxContainer>
-      <h3 tw="font-bold text-center text-xl">Follow me on social media!</h3>
-      <div tw="flex justify-around items-center py-6">
+      <h3 tw="font-bold text-center text-xl md:(text-3xl font-medium)">Follow me on social media!</h3>
+      <div tw="flex justify-around items-center py-6 md:(w-1/2 mx-auto py-10)">
         <a href="https://www.instagram.com/corgijjjasper/" target="_blank">
           <Logo src={IconIG} alt="Instagram - Corgijjjasper" />
         </a>
@@ -26,7 +26,7 @@ const FollowMe = () => (
           <Logo src={IconHong} alt="xiaohongshu" />
         </a>
       </div>
-      <div tw="text-center text-sm">
+      <div tw="text-center text-sm md:(text-lg)">
         We appreciate your follows and likes!
         <br />
         Let's keep connected!
