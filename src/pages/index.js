@@ -10,6 +10,7 @@ import CouponHome from "../components/Sections/coupon-section";
 import AboutMe from "../components/Sections/aboutme-section";
 import HeroImg from "../images/hero.jpg"
 import HeroTexture from "../images/hero-texture.svg"
+import DrawPrize from "../components/DrawPrize/DrawPrize";
 
 const IndexPage = ({ location }) => {
   // useEffect(()=>{

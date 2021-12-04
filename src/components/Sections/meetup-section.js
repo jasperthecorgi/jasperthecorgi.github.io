@@ -16,11 +16,11 @@ const MeetUp = () => (
             <h3 tw="text-sm text-mainBlack font-medium md:(text-lg)">Corgi Meetup</h3>
           </div>
           <div tw="text-2xl font-semibold pt-4 md:(text-3xl pt-6)">Meet with more corgi friends!</div>
-          <p tw="py-4 text-mainBlack text-sm md:(text-lg py-8)">
+          <div tw="py-4 text-mainBlack text-sm md:(text-lg py-8)">
             <p tw="my-2">As corgi pawrents, we know that corgis always love to play with&nbsp;corgis! </p>
             <p tw="my-2">We organized corgi meetup in Great Toronto Area every month!</p>
             <p tw="my-2">Welcome to meet and play with Jasper and his friends!</p>
-          </p>
+          </div>
           <div tw="inline-block text-lg font-bold md:(text-2xl)">Join the group here!</div>
           <a href="https://www.meetup.com/Toronto-Corgi-Meetup-Group/" target="_blank" rel="noreferrer noopener">
             <img src={MeetupIcon} alt="Toronto Corgi Meetup Group" tw="w-24 inline-block ml-2" />

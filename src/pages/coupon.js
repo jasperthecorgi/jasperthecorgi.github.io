@@ -10,14 +10,6 @@ import { MaxContainer } from "../components/share-ui";
 const CouponPage = ({ data, location }) => {
   const list = [
     {
-      id: 1,
-      name: "KAG Pet",
-      image: data.image02,
-      link: "https://kagpet.com/",
-      discount: "10%",
-      code: "JASPER10",
-    },
-    {
       id: 2,
       name: "Charmy Box",
       image: data.image04,
@@ -27,6 +19,14 @@ const CouponPage = ({ data, location }) => {
       discount: "35%",
       firstBox: true,
       code: "CORGIJASPER35",
+    },
+    {
+      id: 9,
+      name: "West and Willow",
+      image: data.image09,
+      link: "westandwillow.com/corgijjjasper",
+      discount: "10%",
+      code: "CORGIJJJASPER",
     },
     {
       id: 3,
@@ -51,6 +51,38 @@ const CouponPage = ({ data, location }) => {
       code: "JASPER15",
     },
     {
+      id: 8,
+      name: "Printy Pets",
+      image: data.image08,
+      link: "https://printypets.com/",
+      discount: "15%",
+      code: "JASPER_15",
+    },
+    {
+      id: 10,
+      name: "Sniff and Bark",
+      image: data.image10,
+      link: "https://sniffandbark.com.co/",
+      discount: "20%",
+      code: "JASPER20",
+    },
+    {
+      id: 1,
+      name: "KAG Pet",
+      image: data.image02,
+      link: "https://kagpet.com/",
+      discount: "10%",
+      code: "JASPER10",
+    },
+    {
+      id: 7,
+      name: "Crown and Paw",
+      image: data.image07,
+      link: "https://crownandpaw.com/",
+      discount: "15%",
+      code: "CORGIJASPER15",
+    },
+    {
       id: 5,
       name: "Pooch Botanics",
       image: data.image01,
@@ -72,9 +104,9 @@ const CouponPage = ({ data, location }) => {
   return (
     <Layout location={location} bgColor="darkBeige">
       <Seo title="Jasper's coupon" />
-      <div tw="bg-darkBeige py-5 min-h-screen text-mainBlack">
+      <div tw="bg-darkBeige pb-5 min-h-screen text-green-700">
         <MaxContainer>
-          <h1 tw="font-bold text-xl text-center text-green-700 rounded p-2.5 my-4">Use Jasper's code to save!</h1>
+          <h1 tw="font-bold text-xl text-center text-green-700 rounded p-2.5 mb-4">Use Jasper's code to save!</h1>
           <div tw="grid grid-cols-2 gap-4">
             {list.map((item) => (
               <a href={item.link} target="_blank">
@@ -126,6 +158,26 @@ export const query = graphql`
       }
     }
     image06: file(relativePath: { eq: "coupon/hugsmart.jpeg" }) {
+      childImageSharp {
+        gatsbyImageData(height: 300, width: 300)
+      }
+    }
+    image07: file(relativePath: { eq: "coupon/crown_and_paw.jpeg" }) {
+      childImageSharp {
+        gatsbyImageData(height: 300, width: 300)
+      }
+    } 
+    image08: file(relativePath: { eq: "coupon/printypets.jpeg" }) {
+      childImageSharp {
+        gatsbyImageData(height: 300, width: 300)
+      }
+    }
+    image09: file(relativePath: { eq: "coupon/west_and_willow.jpeg" }) {
+      childImageSharp {
+        gatsbyImageData(height: 300, width: 300)
+      }
+    }
+    image10: file(relativePath: { eq: "coupon/sniff_and_bark.jpeg" }) {
       childImageSharp {
         gatsbyImageData(height: 300, width: 300)
       }

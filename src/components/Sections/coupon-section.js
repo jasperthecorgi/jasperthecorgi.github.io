@@ -12,11 +12,11 @@ const CouponHome = () => (
           <h3 tw="text-sm text-mainBlack font-medium md:(text-lg)">Coupons</h3>
         </div>
         <div tw="text-3xl font-semibold pt-4 md:(text-4xl pt-6)">Save with Jasper!</div>
-        <p tw="py-4 text-mainBlack text-sm md:(text-lg py-8)">
+        <div tw="py-4 text-mainBlack text-sm md:(text-lg py-8)">
           <p tw="my-2">We love to buy great merchandise for Jasper.</p>
           <p tw="my-2">And we are honored to collaborate with these awesome brands!</p>
           <p tw="my-2">Welcome to use Jasper's coupons to save if you like those products too!</p>
-        </p>
+        </div>
         <InternalLinkBtn to="/coupon">View Coupons</InternalLinkBtn>
       </div>
     </MaxContainer>
