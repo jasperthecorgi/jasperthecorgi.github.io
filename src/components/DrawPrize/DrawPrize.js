@@ -7,35 +7,45 @@ import mData from "./entryList.json"
 const DrawPrize = () => {
   const [firstWinner, setFirstWinner] = useState()
   const [lastWinner, setLastWinner] = useState()
-  const drawWinner = () =>{
+  const randomResult = () =>{
     let firstSet = []
     mData.forEach(user => {
       const newList = new Array(user.entry).fill(user.author);
       firstSet = firstSet.concat(newList);
     });
     const result = Math.floor(Math.random() * firstSet.length);
-    let lastSet = []
-    const newData = mData.filter(item => item.author !== firstSet[result])
-    newData.forEach(user => {
+    return result
+  }
+  const drawWinner = () =>{
+    let firstSet = []
+    mData.forEach(user => {
       const newList = new Array(user.entry).fill(user.author);
-      lastSet = lastSet.concat(newList);
+      firstSet = firstSet.concat(newList);
     });
-    const lastResult = Math.floor(Math.random() * lastSet.length);
-    setTimeout(()=>setFirstWinner(firstSet[result]), 1000)
-    setTimeout(()=>setLastWinner(lastSet[lastResult]), 2000)
+    // let lastSet = []
+    // const newData = mData.filter(item => item.author !== firstSet[result])
+    // newData.forEach(user => {
+    //   const newList = new Array(user.entry).fill(user.author);
+    //   lastSet = lastSet.concat(newList);
+    // });
+    // const lastResult = Math.floor(Math.random() * lastSet.length);
+    const blink = setInterval(()=>setFirstWinner(firstSet[randomResult()]), 50)
+    setTimeout(()=>{
+      clearInterval(blink)
+      setFirstWinner(firstSet[randomResult()])
+    }, 1000)
+    // setTimeout(()=>setLastWinner(lastSet[lastResult]), 2000)
   }
   return (
     <div tw="py-10 bg-darkBeige text-green-700 md:py-20">
       <MaxContainer>
         <div tw="md:(flex flex-col items-center) text-center">
-          <div tw="text-3xl font-semibold pt-4 md:(text-4xl pt-6)">15K GIVEAWAY!</div>
+          <div tw="text-3xl font-semibold pt-4 md:(text-4xl pt-6)">GIVEAWAY ANNOUNCEMENT!</div>
           <img tw="rounded-md my-5 w-2/3 mx-auto" src={Giveaway}/>
           <div>Thanks everyone for joining! We are announcing the winners now!</div>
           <button tw="inline-block my-4 bg-primaryBtn px-6 py-4 rounded-md text-beige" onClick={drawWinner}>Draw Prize</button>
-          <div tw="text-xs">Prize 1: @kagpet custom needle felted dog head!</div>
+          <div tw="text-xs">Prize: Gentle Dog Wash Essentials from @dandylionworld</div>
           <div tw="my-2 py-2 h-16 border border-green-700" css={firstWinner?tw`opacity-100`:tw`opacity-0`}>Winner:<br/> @{firstWinner}</div>
-          <div tw="text-xs">Prize 2: @linecru.co a MÕU a fluffy handle leash + DOÖ a fluffy poop bag!</div>
-          <div tw="my-2 py-2 h-16 border border-green-700" css={lastWinner?tw`opacity-100`:tw`opacity-0`}>Winner:<br/> @{lastWinner}</div>
           <div tw="text-xs">We will PM you for the detail and your information.</div>
         </div>
       </MaxContainer>

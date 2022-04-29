@@ -8,8 +8,13 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     "gatsby-plugin-use-query-params",
-    `gatsby-plugin-sitemap`,
     `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        createLinkInHead: true,
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

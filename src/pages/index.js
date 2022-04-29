@@ -38,6 +38,7 @@ const IndexPage = ({ location }) => {
         <CouponHome/>
         <MeetUp />
         <FollowMe />
+        <DrawPrize/>
       </section>
     </Layout>
   );

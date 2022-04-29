@@ -24,7 +24,7 @@ const CouponPage = ({ data, location }) => {
       id: 9,
       name: "West and Willow",
       image: data.image09,
-      link: "westandwillow.com/corgijjjasper",
+      link: "https://www.westandwillow.com/corgijjjasper",
       discount: "10%",
       code: "CORGIJJJASPER",
     },
