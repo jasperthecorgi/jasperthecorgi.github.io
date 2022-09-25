@@ -24,3 +24,11 @@ export const InternalLinkBtn = ({ children, ...props })=>{
     </button>
   )
 }
+
+export const ExternalLinkBtn = ({ children, ...props })=>{
+  return (
+    <button tw="inline-block my-4 bg-primaryBtn px-6 py-4 rounded-md text-beige font-semibold">
+      <a {...props}>{children}</a>
+    </button>
+  )
+}

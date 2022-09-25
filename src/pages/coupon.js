@@ -12,6 +12,9 @@ const CouponPage = ({ data, location }) => {
   if (list.length === 0) {
     return null
   }
+  list.sort((a,b)=>{
+    return b.node.isPinned - a.node.isPinned
+  })
   return (
     <Layout location={location} bgColor="darkBeige">
       <Seo title="Jasper's coupon" />
@@ -22,18 +25,22 @@ const CouponPage = ({ data, location }) => {
             {list.map(({node}) => (
               <a href={node.referralLink} target="_blank" key={node.id}>
                 <div tw="bg-beige rounded p-2.5 shadow text-center md:(px-10 py-4)">
-                  <h3 tw="font-semibold mb-2 text-green-700 md:hidden" css={node.isLongName && tw`text-xs leading-6`}>
+                  <h3 tw="font-semibold text-green-700 md:hidden">
                     {node.name}
                   </h3>
+                  <div tw="text-xs mb-2 tracking-tight md:hidden">{node.description}</div>
                   <div tw="md:(flex items-center)">
                     <GatsbyImage image={getImage(node.image)} alt={node.name} tw="md:(w-40 h-40)" />
                     <div tw="md:(ml-10 text-left)">
-                      <h3 tw="font-semibold mb-2 text-green-700 text-lg hidden md:block">
+                      <h3 tw="font-semibold text-green-700 text-lg hidden md:block">
                         {node.name}
                       </h3>
-                      <div tw="mt-2 font-semibold">{node.discountCode} </div>
-                      <div tw="text-sm">
-                        ({node.discount}% Off{node.isFirstBoxOnly && " on 1st Box"})
+                      <div tw="text-sm mb-2 tracking-tight hidden md:block">{node.description}</div>
+                      <div tw="md:(border-2 border-green-700 py-1 px-5 w-min)">
+                        <div tw="mt-2 font-semibold md:mt-0">{node.discountCode}</div>
+                        <div tw="text-sm">
+                          ({node.discount}% Off{node.isFirstBoxOnly && " on 1st Box"})
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -54,9 +61,10 @@ export const data = graphql`
       edges {
         node {
           id
-          isLongName
           isFirstBoxOnly
+          isPinned
           name
+          description
           referralLink
           discount
           discountCode
