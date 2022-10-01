@@ -11,9 +11,9 @@
   "94726e6d-922ce70eb242dfae1963.js.LICENSE.txt": "94726e6d-922ce70eb242dfae1963.js.LICENSE.txt",
   "94726e6d-922ce70eb242dfae1963.js.map": "94726e6d-922ce70eb242dfae1963.js.map",
   "94726e6d.js": "94726e6d-922ce70eb242dfae1963.js",
-  "app-b064d38a861a6bb730e3.js.LICENSE.txt": "app-b064d38a861a6bb730e3.js.LICENSE.txt",
-  "app-b064d38a861a6bb730e3.js.map": "app-b064d38a861a6bb730e3.js.map",
-  "app.js": "app-b064d38a861a6bb730e3.js",
+  "app-15926ae3fc6b44fafade.js.LICENSE.txt": "app-15926ae3fc6b44fafade.js.LICENSE.txt",
+  "app-15926ae3fc6b44fafade.js.map": "app-15926ae3fc6b44fafade.js.map",
+  "app.js": "app-15926ae3fc6b44fafade.js",
   "component---cache-caches-gatsby-plugin-offline-app-shell-js-20a46e67b64d1940afb4.js.map": "component---cache-caches-gatsby-plugin-offline-app-shell-js-20a46e67b64d1940afb4.js.map",
   "component---cache-caches-gatsby-plugin-offline-app-shell-js.js": "component---cache-caches-gatsby-plugin-offline-app-shell-js-20a46e67b64d1940afb4.js",
   "component---src-pages-404-js-7882dcb7b48a412650c7.js.map": "component---src-pages-404-js-7882dcb7b48a412650c7.js.map",
@@ -22,8 +22,8 @@
   "component---src-pages-blog-js.js": "component---src-pages-blog-js-51b79c7bf87e6c93581d.js",
   "component---src-pages-corgi-meet-up-js-8282250639e7ab6f06dd.js.map": "component---src-pages-corgi-meet-up-js-8282250639e7ab6f06dd.js.map",
   "component---src-pages-corgi-meet-up-js.js": "component---src-pages-corgi-meet-up-js-8282250639e7ab6f06dd.js",
-  "component---src-pages-coupon-js-2d29177d8a833d7ced41.js.map": "component---src-pages-coupon-js-2d29177d8a833d7ced41.js.map",
-  "component---src-pages-coupon-js.js": "component---src-pages-coupon-js-2d29177d8a833d7ced41.js",
+  "component---src-pages-coupon-js-d5bd733dcc0a4d090800.js.map": "component---src-pages-coupon-js-d5bd733dcc0a4d090800.js.map",
+  "component---src-pages-coupon-js.js": "component---src-pages-coupon-js-d5bd733dcc0a4d090800.js",
   "component---src-pages-food-js-3ad36affc238c6468077.js.map": "component---src-pages-food-js-3ad36affc238c6468077.js.map",
   "component---src-pages-food-js.js": "component---src-pages-food-js-3ad36affc238c6468077.js",
   "component---src-pages-index-js-3833d1b95ed886f99e06.js.map": "component---src-pages-index-js-3833d1b95ed886f99e06.js.map",
@@ -48,6 +48,6 @@
   "static/poppins-devanagari-600-normal.woff2": "static/poppins-devanagari-600-normal-3343afa6b8c01e48a23b077fb3a4aea8.woff2",
   "static/poppins-devanagari-700-normal.woff2": "static/poppins-devanagari-700-normal-349ed9fa39221b45ae9a033c0c3de0e2.woff2",
   "styles.css": "styles.1f08d03a32131a16198a.css",
-  "webpack-runtime-8ba7643633a088a7c9d6.js.map": "webpack-runtime-8ba7643633a088a7c9d6.js.map",
-  "webpack-runtime.js": "webpack-runtime-8ba7643633a088a7c9d6.js"
+  "webpack-runtime-5dff3dbda971780d136c.js.map": "webpack-runtime-5dff3dbda971780d136c.js.map",
+  "webpack-runtime.js": "webpack-runtime-5dff3dbda971780d136c.js"
 }
