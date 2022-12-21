@@ -35,6 +35,9 @@ export const Navbar = ({ bgColor }) => {
           <NavItem>
             <InternalLink to="/coupon">Coupons</InternalLink>
           </NavItem>
+          <NavItem>
+            <InternalLink to="/xmas-card-form">Holiday Card 2022</InternalLink>
+          </NavItem>
           <NavItem>More to come</NavItem>
         </div>
       </MaxContainer>

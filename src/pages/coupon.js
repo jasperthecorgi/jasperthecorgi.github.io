@@ -20,7 +20,8 @@ const CouponPage = ({ data, location }) => {
       <Seo title="Jasper's coupon" />
       <div tw="bg-darkBeige pb-5 min-h-screen text-green-700">
         <MaxContainer>
-          <h1 tw="font-bold text-xl text-center text-green-700 rounded p-2.5 mb-4">Use Jasper's code to save!</h1>
+          <h1 tw="font-bold text-xl text-center text-green-700 rounded px-2.5 md:(mb-2)">Use Jasper's code to save!</h1>
+          <h4 tw="text-base text-center text-green-700 rounded p-2.5 mb-2 md:(mb-6)">Let us know if you use one of our codes so we can give you a shout out!</h4>
           <div tw="grid grid-cols-2 gap-4 md:gap-10">
             {list.map(({node}) => (
               <a href={node.referralLink} target="_blank" key={node.id}>
@@ -36,12 +37,14 @@ const CouponPage = ({ data, location }) => {
                         {node.name}
                       </h3>
                       <div tw="text-sm mb-2 tracking-tight hidden md:block">{node.description}</div>
-                      <div tw="md:(border-2 border-green-700 py-1 px-5 w-min)">
-                        <div tw="mt-2 font-semibold md:mt-0">{node.discountCode}</div>
-                        <div tw="text-sm">
-                          ({node.discount}% Off{node.isFirstBoxOnly && " on 1st Box"})
+                      {node.discountCode && (
+                        <div tw="md:(border-2 border-green-700 py-1 px-5 w-min)">
+                          <div tw="mt-2 font-semibold md:mt-0">{node.discountCode}</div>
+                          <div tw="text-sm whitespace-nowrap">
+                            ({node.discount}% Off{node.isFirstBoxOnly && " on 1st Box"})
+                          </div>
                         </div>
-                      </div>
+                      )}
                     </div>
                   </div>
                 </div>
