@@ -1,0 +1,1 @@
+{"version":3,"file":"component---src-pages-temporary-page-js-96f6081806b77d33b91d.js","mappings":"8HAMA,UANsB,WACpB,OACE,0DAEJ,C","sources":["webpack://personal/./src/pages/temporary-page.js"],"sourcesContent":["const TemporaryPage = () =>{\n  return (\n    <div>Confirmation Code: GNHBSVSC193405856</div>\n  )\n}\n\nexport default TemporaryPage"],"names":[],"sourceRoot":""}
